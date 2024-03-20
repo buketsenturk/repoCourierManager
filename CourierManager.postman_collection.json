@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "d1156d33-b2f3-4dfc-8573-c75bd279afaa",
+		"name": "CourierManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9275937"
+	},
+	"item": [
+		{
+			"name": "stores",
+			"item": [
+				{
+					"name": "getAllStores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "couriers",
+			"item": [
+				{
+					"name": "receiveLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"123\",\r\n    \"lat\": 41.0066751,\r\n    \"lng\": 28.6552262\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/couriers/location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"couriers",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTotalTravelDistance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/couriers/123/distance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"couriers",
+								"123",
+								"distance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
